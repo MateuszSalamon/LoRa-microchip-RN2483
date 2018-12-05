@@ -1,0 +1,5 @@
+- Monitor ethernet port on RBpi
+- If signal detected start receiving into memory
+- Transfer into file
+- Splice the file into usefull data
+- Save ufdata to progreSQL
