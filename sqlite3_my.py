@@ -14,8 +14,6 @@ def db_data_method(data1):
 
     c = conn.cursor()
 
-    # c.execute("""DROP TABLE lora;""") # uncomment to remove table
-
     c.execute("""CREATE TABLE IF NOT EXISTS lora (
                 rxpk text, tmst text, chan text, rfch text,
                 freq text, stat text, modu text, datr text,
@@ -39,7 +37,6 @@ def db_time_method(data1):
     conn = sqlite3.connect("LoRa_db.db")
     c = conn.cursor()
 
-    # c.execute("""DROP TABLE time;""") # uncomment to remove table
 
     c.execute("""CREATE TABLE IF NOT EXISTS time (
                 stat text, time text, rxnb text, rxok text,
