@@ -13,5 +13,6 @@ download scripts presented below:
 * receive2.py
 * transform_data.py
 * sqlite3.py
+* drop_all.py
 
 run script receive2.py
