@@ -1,5 +1,6 @@
 import sqlite3
-password = input()
+print("Enter password: ")
+password = str(input())
 
 if password == "1234":
     print("password accepted cleaning the database now")

@@ -27,8 +27,8 @@ def db_data_method(data1):
      """, ("rxpk",tab5[1],tab5[2],tab5[3],tab5[4],tab5[5],tab5[6],tab5[7],tab5[8],tab5[9],
            tab5[10],tab5[11],tab5[12]))
 
-    c.execute("SELECT * FROM lora")
-    print(c.fetchall())
+    # c.execute("SELECT * FROM lora")
+    # print(c.fetchall())
     conn.commit()
     conn.close()
 
@@ -48,8 +48,8 @@ def db_time_method(data1):
          (?,?,?,?,?,?,?,?)
          """, ("stat", tab5[1], tab5[2], tab5[3], tab5[4], tab5[5], tab5[6], tab5[7]))
 
-    c.execute("SELECT * FROM time")
-    print(c.fetchall())
+    # c.execute("SELECT * FROM time")
+    # print(c.fetchall())
     conn.commit()
     conn.close()
 
