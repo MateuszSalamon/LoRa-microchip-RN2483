@@ -16,3 +16,5 @@ download scripts presented below:
 * drop_all.py
 
 run script receive2.py
+
+done for 17.12.2018
