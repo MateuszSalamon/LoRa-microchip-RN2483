@@ -1,0 +1,28 @@
+czerwony - bibilografia
+pink - skrót
+niebieski - jeszcze cos dopisac na ten temat
+https://lora-alliance.org/resource-hub/what-lorawantm Topologia gwiazdy rys 1.
+Magazyn Elektronik 4/2018 INDEKS 340 731
+https://www.maximintegrated.com/en/app-notes/index.mvp/id/960 Schemat co wziolem
+Pozycja numer 1		http://www.swiatradio.com.pl/virtual/download/slownik1.pdf chirp spread spectrum po polsku
+pozycja numer 2		RN2483 LoRa technology  transceiver module data sheet
+pozycja numer 3		https://www.microchip.com/DevelopmentTools/ProductDetails/DV164140-1
+pozycja numer 4 	lorawan specification linia 302
+pozycja numer 5 	https://lora-alliance.org/lorawan-for-developers
+pozycja numer 6 	module command guide
+pozycja numer 7 	gateway users guide komendy ,config file,Synch word
+pozycja numer 8 	Raspberry pi homepage and mission 
+pozycja numer 9		https://www.raspberrypi.org/documentation/hardware/computemodule/datasheets/rpi_DATA_CM_1p0.pdf
+pozycja numer 10 	https://www.raspberrypi.org/downloads/
+pozycja numer 11 	https://www.dexterindustries.com/howto/run-a-program-on-your-raspberry-pi-at-startup/
+pozycja numer 12 	https://www.st.com/resource/en/datasheet/stm32f103c8.pdf
+pozycja numer 13	https://datasheets.maximintegrated.com/en/ds/MAX1811.pdf MAX1811 datasheet
+pozycja numer 14 	https://www.maximintegrated.com/en/app-notes/index.mvp/id/960
+pozycja numer 15 	http://wiki.stm32duino.com/images/c/c1/Vcc-gnd.com-STM32F103C8-schematic.pdf	blue pill
+pozycja numer 16 	https://pl.mouser.com/datasheet/2/418/NG_DS_PTF-FAMILY_A-775357.pdf 			pt100
+pozycja numer 17 	http://www.ti.com/lit/ds/symlink/opa358.pdf										OPA358 OpAmp
+pozycja numer 18 	https://www.diodes.com/assets/Datasheets/ds11303.pdf 							NMOS
+pozycja numer 19 	http://213.114.131.21/_pdf/FD/FDN358P.pdf 										PMOS
+pozycja numer 20	https://www.researchgate.net/publication/290082061_On_the_Design_of_an_Intelligent_Battery_Charge_Controller_for_PV_Panels		
+pozycja numer 21	https://sensing.honeywell.com/honeywell-sensing-hih5030-5031-series-product-sheet-009050-2-en.pdf HIH5030
+pozycja numer 22 	https://wiki.stm32duino.com/index.php?title=Burning_the_bootloader USB bootloader

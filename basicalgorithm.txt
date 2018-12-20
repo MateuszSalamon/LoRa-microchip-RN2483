@@ -1,0 +1,69 @@
+/*in setup:
+ -setup the lora module by UART 57600 baud
+*/
+
+check every 30 min
+PB0 and PB1 on
+if (EnTemp ==1 & EnHum ==1){
+	get adc input from PA0;
+	convert adc input into degree value;
+	get adc input from PA1;
+	convert adc input into % value;
+}
+
+disable PB0 and PB1 
+
+send temp and hum val by TX
+
+
+if temp < 15 deg {
+	check every 3h
+}
+
+if temp > 40 deg and hum < 20 %{
+	check every 10 min 
+}
+
+
+
+
+/*
+//with 180K resistor no R19
+138.5 	ohm 	= 	2.52	= 100deg
+100 	ohm 	= 	1.73	= 0 deg 
+
+//y = 48.7342x + 15.6899  		V to ohm 100 to 138.5
+//y = 2.5974x - 259.74			Ohm to degree
+*/
+
+/*
+HIH5030
+@70 deg					@25deg
+0.5 	V 	= 	0%		0.5V	=	0%
+1 		V	=	27%		1V		=	25%
+1.25	V	=	40%		1.25V	=	40%	
+1.5		V	=	57%		1.5V	=	50%
+1.75	V	=	75%		1.75V	=	60%
+2		V	=	88%		2V		=	75%
+2.25	V	=	100%	2.25V	=	80%
+						2.5V	=	92%
+
+*/
+
+//PB0 == EnTemp
+//PB1 == EnHum
+/*
+sensor hum = (vout/3.3 - 0.1515)/0.00636 prawdziwa charakterystyka
+
+
+
+
+
+
+*/
+
+
+//Wątpliwości:
+// Kodowanie danych przesyłanych do lory
+// Czy oprogramowanie musi działać 
+// 

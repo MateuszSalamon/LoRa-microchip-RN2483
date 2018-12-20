@@ -1,0 +1,14 @@
+op amp 				MAX9117 
+				ADA4841
+				OPA358
+
+boost converter 		MCP1640bt 350mA
+	3.0 - 4.2V into 5V	
+				TPS61252 1.5A
+
+li-ion battery manm 		MCP73811T-420I/OT
+				M73831T-2ACI/MC
+li-ion battery charger 		TP4056
+li-ion bateries
+humidity sensor 	SYH-2R Resistance 
+temperature sensor 	PT100 Resistance
