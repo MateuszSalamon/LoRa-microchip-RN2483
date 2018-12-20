@@ -113,7 +113,7 @@ void fwaiting(float d, float h){ // temperature and humidity
       wtime = wtime - (3600000); // above 10 degrees C +60 minutes
     }
     
-    if (wtime >= (6*60*1000*60)){ // 21600000 = 3 hours
+    if (wtime >= (6*60*1000*60)){ // 21600000 = 6 hours
       wtime = (6*60*1000*60);   // max wait time is 6 hours
     }
     else if (wtime <= (30*1000*60)){  //
@@ -144,7 +144,7 @@ void loop() {
 
   fwaiting(degree,humidity);
   
-  Serial.println(str);
+  Serial.println("mac tx uncf 5 "+str); // 5 is a LoRa gateway port number
   //Serial.println(humidity);
   
   delay(5000);
