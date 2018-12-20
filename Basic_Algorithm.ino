@@ -1,20 +1,20 @@
-tint wtime =30 * 1000 * 60;
-int initialized = 0;
+int wtime =30 * 1000 * 60;
+bool initialized = 0;
 short int measuretime = 20000;//20000;  //20sek
 String channel ="0"; // set up used channel 
 
 void LoRasetup(String channel){ //keep most parameters on delays are not necessary 
-  Serial.println("mac set dr 0");             delay(5);
-  Serial.println("mac set ch drrange "+ channel +" 0 0"); delay(5);
-  Serial.println("mac set ch dcycle "+ channel +" 0");    delay(5);
-  Serial.println("mac set ch status "+ channel +" on");   delay(5);
-  Serial.println("mac set retx 20");          delay(5);
-  Serial.println("mac set rxdelay1 1500");    delay(5);
-  Serial.println("mac set nwkskey 2b7e151628aed2a6abf7158809cf4f3c");delay(5);  //default key
-  Serial.println("mac set appskey 3C8F262739BFE3B7BC0826991AD0504D");delay(5);  //default key
-  Serial.println("mac set devaddr 001A0640"); delay(5);                         //default device adress
-  Serial.println("mac save");                 delay(5);
-  Serial.println("mac join abp");             delay(5);
+  Serial.println("mac set dr 0");             
+  Serial.println("mac set ch drrange "+ channel +" 0 0"); 
+  Serial.println("mac set ch dcycle "+ channel +" 0");    
+  Serial.println("mac set ch status "+ channel +" on");   
+  Serial.println("mac set retx 20");          
+  Serial.println("mac set rxdelay1 1500");    
+  Serial.println("mac set nwkskey 2b7e151628aed2a6abf7158809cf4f3c");  //default key
+  Serial.println("mac set appskey 3C8F262739BFE3B7BC0826991AD0504D");  //default key
+  Serial.println("mac set devaddr 001A0640");                          //default device adress
+  Serial.println("mac save");                 
+  Serial.println("mac join abp");             
   
   
 } 
@@ -100,7 +100,7 @@ void fwaiting(float d, float h){ // temperature and humidity
   x * 1000*60*60 = hours
   x * 1000*60*60*24 = days
   */
-  int initialized = 1;
+  initialized = 1;
   
   if (initialized > 0) {
     if (d < 10.0){
