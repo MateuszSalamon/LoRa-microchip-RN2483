@@ -29,12 +29,14 @@ return degree;
 }
 
 
-float getADC2val()  // humidity conversion
+float getADC2val(float deg)  // humidity conversion
 {   
 short int PA1value = analogRead(PA1);
 float voltage = PA1value * (3.3 / 4095.0); //12bit ADC
-float humidity = (voltage * (44)) - 19;//line at 25deg
-return humidity;
+//float humidity = (voltage * (44)) - 19;//line at 25deg
+float humidity = ((voltage/3.3) - 0.1515)/(0.00636);
+float truehumidity = (humidity)/(1.0546-(0.00216*deg));
+return truehumidity;
 }
 
 float measureTemp(){  //measuring ADC inputs for temperature
@@ -46,10 +48,10 @@ float measureTemp(){  //measuring ADC inputs for temperature
   return degree;
 }
 
-float measureHum(){   //measuring ADC inputs for humidity
+float measureHum(float deg){   //measuring ADC inputs for humidity
   digitalWrite(PB1,HIGH);
   delay(0.4 * measuretime);
-  float humidity = getADC2val();
+  float humidity = getADC2val(deg);
   delay(10);
   digitalWrite(PB1,LOW);
   return humidity;
@@ -86,7 +88,6 @@ String transmod(float d,float h){ /*
  // Serial.print(s);
   return s;
   }
-  
 }
 
 void fwaiting(float d, float h){ // temperature and humidity
@@ -118,7 +119,7 @@ void fwaiting(float d, float h){ // temperature and humidity
     else if (wtime <= (30*1000*60)){  //
       wtime = (30*1000*60);   //min wait time is 30 min
     }
-    wtime = 1;//comment to remove wait restriction 
+    //wtime = 1;  //comment to remove wait restriction 
     delay(wtime);
     
   }
@@ -138,10 +139,10 @@ void loop() {
   // put your main code here, to run repeatedly:
   
   float degree = measureTemp();
-  float humidity = measureHum();
+  float humidity = measureHum(degree);
   String str = transmod(degree,humidity);
 
- // fwaiting(degree,humidity);
+  fwaiting(degree,humidity);
   
   Serial.println(str);
   //Serial.println(humidity);
